@@ -1,0 +1,25 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Overtime
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+  %nav.navbar.navbar-light.navbar-expand-md.bg-light
+    .container
+      %button.navbar-toggler{"data-target" => "#navcol-1", "data-toggle" => "collapse"}
+        %span.sr-only Toggle navigation
+        %span.navbar-toggler-icon
+      #navcol-1.collapse.navbar-collapse
+        %ul.nav.navbar-nav.flex-grow-1.justify-content-between
+          %li.nav-item{:role => "presentation"}
+            %a.nav-link{:href => "#"} First Item
+          %li.nav-item{:role => "presentation"}
+            %a.nav-link{:href => "#"} Second Item
+          %li.nav-item{:role => "presentation"}
+            %a.nav-link{:href => "#"} Third Item
+
+  = yield
