@@ -1,0 +1,13 @@
+.card.w-75.text-center.ml-auto.mr-auto.mt-3
+  .card-body
+    %h4.card-title Filters
+    %h6.text-muted.card-subtitle.mb-2 apply filters for buyers
+    %form#form-select-age
+      %select#select-age.form-control
+        %optgroup{label: "Choose age"}
+          %option{value: "10"} All
+          %option{value: "11"} Age from 18-25
+          %option{value: "12"} Age from 26-35
+          %option{value: "13"} Age from 36-50
+          %option{value: "14"} Age from 51-60
+    %a.card-link.btn.btn-default.btn-lg.mt-3{"data-target" => "#create-buyer-modal", "data-toggle" => "modal", href: "#"} Create buyer 

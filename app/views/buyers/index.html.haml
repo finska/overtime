@@ -1,0 +1,6 @@
+.container
+  = render :partial => 'card-select-form'
+  .text-center
+    %input#search-input.form-control.w-25.mt-3.mb-3.ml-auto.mr-auto{name: "search", placeholder: "Search buyers...", type: "text"}/
+  = render :partial => 'buyers-table-form'
+  = render :partial => 'modal'

@@ -1,0 +1,26 @@
+%form
+  .table-responsive
+    %table.table
+      %thead
+        %tr
+          %th{style: "width:5%;"} Check
+          %th{style: "width:25%;"} Name
+          %th{style: "width:35%;"} Description
+          %th{style: "width:5%;"} Age
+          %th
+          %th
+      %tbody
+      - @buyers.each do |buyer|
+        %tr.user
+          %td.text-center{"check-id" => "#"}
+            %input{"buyer-id" => "#{buyer.id}", type: "checkbox", name: "check-#{buyer.id}"}/
+          %td
+            = buyer.name
+          %td.flex-wrap
+            = buyer.description
+          %td.age{"buyer-id" => "#{buyer.id}"}
+            = buyer.age
+          %td.p-2
+            %button#update-buyer.btn.btn-success.btn-block.btn-sm{"buyer-id" => "#{buyer.id}", type: "button"} Update
+          %td.p-2
+            %button#delete-buyer.btn.btn-danger.btn-block.btn-sm{"buyer-id" => "#{buyer.id}", type: "button"} delete
